@@ -10,22 +10,29 @@ html {
 .Spinner,
 .Spinner:after {
   border-radius: 50%;
-  width: 10em;
-  height: 10em;
+  width: 2em;
+  height: 2em;
 }
 
 .Spinner {
   position: relative;
-  margin: 60px auto;
-  border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-  border-left: 1.1em solid #ffffff;
+  border-top: 0.5em solid rgba(255, 255, 255, 0.2);
+  border-right: 0.5em solid rgba(255, 255, 255, 0.2);
+  border-bottom: 0.5em solid rgba(255, 255, 255, 0.2);
+  border-left: 0.5em solid white;
 
   font-size: 10px;
   text-indent: -9999em;
   transform: translateZ(0);
-  animation: load8 1.1s infinite linear;
+  visibility: hidden;
+
+  animation: visibility 0.2s 0.2s forwards ease, load8 1.1s infinite linear;
+}
+
+@keyframes visibility {
+  to {
+    visibility: visible;
+  }
 }
 
 @keyframes load8 {
@@ -35,4 +42,14 @@ html {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.InlineContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.InlineContent > p {
+  margin-right: 10px;
 }
