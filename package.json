@@ -10,7 +10,8 @@
     "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "typescript": "3.3.3"
+    "typescript": "3.3.3",
+    "yarn": "1.21.1"
   },
   "scripts": {
     "start": "react-scripts start",
