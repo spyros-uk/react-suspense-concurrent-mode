@@ -7,7 +7,7 @@ const initialPokemon = suspensify(getPokemonById(pokemonId))
 export default function PokemonDetails() {
   // return new Error("Test Error")
   const [pokemonData, setPokemonData] = useState(initialPokemon)
-  const [startTransition] = useTransition()
+  const [startTransition] = useTransition({ timeoutMs: 1000 })
 
   const pokemon = pokemonData.read()
   const onNext = () =>
